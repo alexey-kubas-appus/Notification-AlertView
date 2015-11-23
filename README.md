@@ -23,13 +23,13 @@ pod 'NotificationAlertView'
 ##Popup with custom view
 
 As a popup may be used any view for example view configured from storyboard
-```
+```swift
 let popup = NotificationAlertView.popupWithView(self.samplePopupView)
 
 popup.show()
 ```
 change height or popup position
-```
+```swift
 let popup = NotificationAlertView.popupWithView(self.samplePopupView)
 
 popup.position = NotificationAlertViewPosition.Bottom
@@ -44,7 +44,7 @@ popup.show()
 ##Question popup 
 
 Popup with text and Yes/No options. Use customCompletionHandler to get presed option index (Yes:0 No:1)
-```
+```swift
 let question = "Lorem ipsum dolor sit amet?"
 
 let popup = NotificationAlertView.popupWithQuestion(question)
@@ -66,7 +66,7 @@ popup.show()
 ##Dialog popup 
 
 Popup with text and warious number of options. Use customCompletionHandler to get presed option index
-```
+```swift
 let question = "Lorem ipsum dolor sit amet?"
 
 let buttonTitles = ["Yes", "No", "Oh No!"]
@@ -105,7 +105,7 @@ popup.show()
 Simple popup with text. Use hideAfterDelay property or outer action to hide
 
 
-```
+```swift
 let popup = NotificationAlertView.popupWithText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.")
 
 popup.hideAfterDelay = 3
