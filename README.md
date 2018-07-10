@@ -1,9 +1,9 @@
-Notification-AlertView
+APNotificationAlertView
 =====================
 
-Made by [![Appus Studio](Resource/logo.png)](http://appus.pro)
+Made by [![Appus Studio](Resource/appus.png)](https://appus.software)
 
-'NotificationAlertView' allow you to show any view as popup notification with cube transform. Developed for easy extension and flexible integration.:point_up:
+'APNotificationAlertView' allow you to show any view as popup notification with cube transform. Developed for easy extension and flexible integration.:point_up:
 
 * [Setup](#setup)
 * [Demo usage](#demo-usage)
@@ -23,16 +23,18 @@ pod 'NotificationAlertView'
 ##Popup with custom view
 
 As a popup may be used any view for example view configured from storyboard
+
 ```swift
-let popup = NotificationAlertView.popupWithView(self.samplePopupView)
+let popup = APNotificationAlertView.popupWithView(self.samplePopupView)
 
 popup.show()
 ```
 change height or popup position
-```swift
-let popup = NotificationAlertView.popupWithView(self.samplePopupView)
 
-popup.position = NotificationAlertViewPosition.Bottom
+```swift
+let popup = APNotificationAlertView.popupWithView(self.samplePopupView)
+
+popup.position = APNotificationAlertViewPosition.Bottom
 
 popup.height = 150
 
@@ -47,13 +49,13 @@ Popup with text and Yes/No options. Use customCompletionHandler to get presed op
 ```swift
 let question = "Lorem ipsum dolor sit amet?"
 
-let popup = NotificationAlertView.popupWithQuestion(question)
+let popup = APNotificationAlertView.popupWithQuestion(question)
 
 popup.customCompletionHandler = {
 
     (index: Int) -> Void in
 
-    NotificationAlertView.hideAnimated(true)
+    APNotificationAlertView.hideAnimated(true)
 
     print("Taped button at index: \(index)")
 
@@ -71,13 +73,13 @@ let question = "Lorem ipsum dolor sit amet?"
 
 let buttonTitles = ["Yes", "No", "Oh No!"]
 
-let popup = NotificationAlertView.popupDialogWithText(question, options: buttonTitles)
+let popup = APNotificationAlertView.popupDialogWithText(question, options: buttonTitles)
 
 popup.customCompletionHandler = {
 
     (index: Int) -> Void in
 
-    NotificationAlertView.hideAnimated(true)
+    APNotificationAlertView.hideAnimated(true)
 
     let alert = UIAlertController(title: "Taped button", message: "at index: \(index)", preferredStyle: .Alert)
 
@@ -106,7 +108,7 @@ Simple popup with text. Use hideAfterDelay property or outer action to hide
 
 
 ```swift
-let popup = NotificationAlertView.popupWithText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.")
+let popup = APNotificationAlertView.popupWithText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.")
 
 popup.hideAfterDelay = 3
 
@@ -121,7 +123,7 @@ popup.show()
 Developed By
 ------------
 
-* Alexey Kubas, Andrey Pervushin, Appus Studio
+* Alexey Kubas, Andrey Pervushin, [Appus Studio](https://appus.software)
 
 License
 --------
